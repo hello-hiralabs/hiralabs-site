@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HiraLabs — Calm software for things that matter daily</title>
+<meta name="description" content="HiraLabs is a small independent software studio. Our first product is Noorly — the Qur'an, prayer times, and qibla direction in one quiet place.">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<meta property="og:title" content="HiraLabs — Calm software for things that matter daily">
+<meta property="og:description" content="Noorly — Daily Quran & Prayer Times. The Qur'an, prayer times, and qibla direction in one quiet place.">
+<meta property="og:image" content="https://hiralabs.net/img/noorly-screens.png">
+<meta property="og:url" content="https://hiralabs.net/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --emerald:#0B3B31;
+  --paper:#F4F3F0;
+  --white:#FFFFFF;
+  --ink:#3A3A38;
+  --gold:#C9A24B;
+  --on-emerald:#D9E2DE;
+  --measure:34rem;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--ink);background:var(--white);
+  line-height:1.65;font-size:1.0625rem;
+}
+h1,h2,h3{font-family:Poppins,Inter,sans-serif;font-weight:600;line-height:1.18;letter-spacing:-0.015em;color:var(--emerald)}
+h1{font-size:clamp(2.1rem,5.4vw,3.6rem)}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+h3{font-size:1.2rem;font-weight:500}
+p{max-width:var(--measure)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+.wrap{width:min(68rem,100% - 2.5rem);margin-inline:auto}
+
+/* ---------- pita ---------- */
+.band{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.band--paper{background:var(--paper)}
+.band--white{background:var(--white)}
+.band--emerald{background:var(--emerald);color:var(--on-emerald)}
+.band--emerald h1,.band--emerald h2,.band--emerald h3{color:var(--paper)}
+
+/* ---------- kepala ---------- */
+.masthead{background:var(--paper);padding-block:1.15rem}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.masthead img{height:2.1rem;width:auto}
+.masthead nav{display:flex;gap:1.6rem;font-size:0.95rem}
+.masthead nav a{text-decoration:none;color:var(--emerald);padding-block:.25rem}
+.masthead nav a:hover{text-decoration:underline;text-underline-offset:.28em}
+
+/* ---------- pembuka ---------- */
+.hero{text-align:center;padding-bottom:0}
+.hero h1{margin-inline:auto;max-width:22ch}
+.hero .product{
+  font-family:Poppins,sans-serif;font-weight:500;font-size:1.12rem;
+  color:var(--gold);margin-top:1.5rem;
+}
+.hero p.lede{margin:1.15rem auto 0;max-width:42ch;color:var(--on-emerald)}
+.hero .note{margin-top:1rem;font-size:.9rem;color:#89A099}
+
+.button{
+  display:inline-block;margin-top:2rem;
+  background:var(--gold);color:var(--emerald);
+  font-family:Poppins,sans-serif;font-weight:600;font-size:1rem;
+  text-decoration:none;padding:.85rem 2rem;border-radius:2rem;
+}
+.button:hover{background:#D9B461}
+.button:focus-visible,.masthead nav a:focus-visible,footer a:focus-visible{
+  outline:2px solid var(--gold);outline-offset:3px;border-radius:2px;
+}
+
+/* gambar layar produk: latarnya identik dengan pita, jadi tepinya lenyap */
+.screens{margin-top:clamp(2.5rem,6vw,4rem);width:min(60rem,100%);margin-inline:auto}
+
+/* ---------- fitur ---------- */
+.section-lead{text-align:center;margin-bottom:clamp(2.5rem,5vw,3.5rem)}
+.section-lead p{margin:.85rem auto 0;max-width:38ch}
+.features{display:grid;gap:clamp(2.5rem,5vw,3rem);grid-template-columns:repeat(3,1fr)}
+.feature img{width:min(19rem,100%);margin-inline:auto}
+.feature h3{margin-top:.35rem;text-align:center}
+.feature p{margin:.6rem auto 0;max-width:30ch;text-align:center;font-size:1rem}
+
+/* ---------- tentang ---------- */
+.about{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(2.5rem,6vw,4.5rem);align-items:center}
+.about p + p{margin-top:1.1rem}
+.about h2{margin-bottom:1.4rem}
+.about img{width:min(20rem,100%)}
+
+/* ---------- ajakan penutup ---------- */
+.closing{text-align:center}
+.closing h2{max-width:18ch;margin-inline:auto}
+
+/* ---------- kaki ---------- */
+footer{background:var(--paper);padding-block:3rem;text-align:center;font-size:.95rem}
+footer a{color:var(--emerald)}
+footer p + p{margin-top:.7rem}
+footer p{margin-inline:auto}
+.copyright{color:#8A8A84;font-size:.875rem;margin-top:1.6rem}
+
+@media (max-width:52rem){
+  .features{grid-template-columns:1fr;gap:3rem}
+  .about{grid-template-columns:1fr;gap:2.5rem}
+  .about img{margin-inline:auto}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a href="/"><img src="img/logo.png" alt="HiraLabs"></a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="band band--emerald hero">
+    <div class="wrap">
+      <h1>Calm software for things that matter daily.</h1>
+      <p class="product">Noorly — Daily Quran &amp; Prayer Times</p>
+      <p class="lede">The Qur'an, prayer times, and qibla direction in one quiet place. Built to be opened briefly and closed again — no clutter, no streak-shaming, no ads competing for your attention.</p>
+      <a class="button" href="[ALAMAT_GOOGLE_FORM]">Join the waitlist</a>
+      <p class="note">Launching soon — leave your email and we'll tell you once.</p>
+      <img class="screens" src="img/noorly-screens.png" alt="Noorly app screens showing the daily dashboard, Qur'an surah list, and qibla compass">
+    </div>
+  </section>
+
+  <section class="band band--paper">
+    <div class="wrap">
+      <div class="section-lead">
+        <h2>What Noorly does</h2>
+        <p>Three things, done properly.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <img src="img/feature-quran.png" alt="Noorly Qur'an reader showing Surah Al-Faatiha with translation and audio controls">
+          <h3>114 surahs, with murottal audio</h3>
+          <p>The complete Qur'an in clear Arabic script, with translation alongside. Play murottal recitation while you read, or listen on its own — the audio keeps going when the screen is off.</p>
+        </article>
+        <article class="feature">
+          <img src="img/feature-qibla.png" alt="Noorly qibla compass showing direction, distance to the Kaaba, and accuracy status">
+          <h3>Prayer times and qibla compass</h3>
+          <p>Accurate prayer times for wherever you are, with a qibla compass that works offline. Set a gentle adzan reminder, or keep it silent — the choice stays yours.</p>
+        </article>
+        <article class="feature">
+          <img src="img/feature-daily.png" alt="Noorly dashboard showing prayer times and the daily sunnah checklist">
+          <h3>Daily practice, quietly tracked</h3>
+          <p>A simple record of what you've read and when. It is there when you want to look, and it stays out of the way when you don't. Progress you can see without being pushed.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--white">
+    <div class="wrap about">
+      <div>
+        <h2>About HiraLabs</h2>
+        <p>HiraLabs is a small independent software studio. We build applications that respect attention — tools you open with a purpose, use briefly, and close without feeling pulled back in.</p>
+        <p>The name is drawn from the idea of a quiet place set apart for reflection. It describes how we prefer to work, and the kind of software we want to make.</p>
+        <p>Noorly is our first product. It is free to use, and the features that matter most are not locked away. A paid tier exists to keep the studio running, never to hold something essential hostage.</p>
+      </div>
+      <img src="img/lockup.png" alt="HiraLabs studio logo">
+    </div>
+  </section>
+
+  <section class="band band--emerald closing">
+    <div class="wrap">
+      <h2>Be there on the first day.</h2>
+      <a class="button" href="[ALAMAT_GOOGLE_FORM]">Join the waitlist</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Questions or feedback — <a href="mailto:hello@hiralabs.net">hello@hiralabs.net</a></p>
+    <p><a href="privacy.html">Privacy Policy</a></p>
+    <p class="copyright">© 2026 HiraLabs. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
